@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luc's Shop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #8fd114;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        nav a:hover {
+            background-color: #575757;
+            color: #fff;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .product-item {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            width: calc(33% - 40px);
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .product-item img {
+            max-width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 15px;
+        }
+        .product-item h3 {
+            margin: 10px 0;
+            font-size: 1.2em;
+            color: #5D3FD3;
+        }
+        .product-item p {
+            font-size: 1em;
+            margin: 10px 0;
+        }
+        .product-item .price {
+            color: #27ae60;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .buy-section {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+        .buy-section img {
+            max-width: 100%;
+            height: auto;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+    <script>
+        function showSection(sectionId) {
+            document.querySelector('.container').style.display = 'none';
+            document.querySelector('.buy-section').style.display = 'none';
+
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        function showContact() {
+            alert("Para enviar um suporte, use o gmail: lucshop440@gmail.com");
+        }
+    </script>
+</head>
+<body>
+
+<header>
+    <h1>Luc's Shop</h1>
+</header>
+
+<nav>
+    <a href="javascript:void(0)" onclick="showSection('buy-section')">Comprar</a>
+    <a href="javascript:void(0)" onclick="showSection('products-section')">Produtos</a>
+    <a href="javascript:void(0)" onclick="showContact()">Contato</a>
+</nav>
+
+<div id="products-section" class="container">
+    <section id="products">
+        <h2>Produtos Disponíveis</h2>
+        <div class="product-list">
+            <!-- Produtos antigos -->
+            <div class="product-item">
+                <img src="https://cdn.discordapp.com/attachments/1242973662345433088/1243348707886497802/Robloxi_valuuta_22Robux22_Ikoon.png?ex=6651cef8&is=66507d78&hm=335037340242d3902d476702de29c4fe58eb54dc9773ded7e6f8fa57caa161a2&" alt="359 Robux - GIFT CARD">
+                <h3>359 ROBUX - GIFT CARD</h3>
+                <p>Gift Card - Roblox</p>
+                <p class="price">R$ 30,00</p>
+            </div>
+            <div class="product-item">
+                <img src="https://cdn.discordapp.com/attachments/1242973662345433088/1243348707886497802/Robloxi_valuuta_22Robux22_Ikoon.png?ex=6651cef8&is=66507d78&hm=335037340242d3902d476702de29c4fe58eb54dc9773ded7e6f8fa57caa161a2&" alt="500 Robux - GIFT CARD">
+                <h3>500 ROBUX - GIFT CARD</h3>
+                <p>Gift Card - Roblox</p>
+                <p class="price">R$ 40,00</p>
+            </div>
+            <div class="product-item">
+                <img src="https://cdn.discordapp.com/attachments/1242973662345433088/1243349380208005130/22aca1ef196c745a8717c6ce0da39120.png?ex=6651cf98&is=66507e18&hm=97223ee4b297c391ffde0861f9d877d757b4bd73eeb2116b4e865548f56fe06a&" alt="Brawl Pass Plus">
+                <h3>Brawl Pass Plus</h3>
+                <p>Brawl Pass Plus - Brawl Stars</p>
+                <p class="price">R$ 56,00</p>
+            </div>
+            <div class="product-item">
+                <img src="https://cdn.discordapp.com/attachments/1242973662345433088/1243348981845856378/gemas-brawl-stars-wiki.png?ex=6651cf39&is=66507db9&hm=d25f1fdcb839ca19e5d900e6a34cbcb81be325e0ab0653e7e295827d9e7ba9cb&" alt="Brawl Stars 33 Gemas">
+                <h3>Brawl Stars 33 Gemas</h3>
+                <p>33 Gemas - Brawl Stars</p>
+                <p class="price">R$ 13,76</p>
+            </div>
+            <div class="product-item">
+                <img src="https://cdn.discordapp.com/attachments/1242973662345433088/1243348981845856378/gemas-brawl-stars-wiki.png?ex=6651cf39&is=66507db9&hm=d25f1fdcb839ca19e5d900e6a34cbcb81be325e0ab0653e7e295827d9e7ba9cb&" alt="Brawl Stars 88 Gemas">
+                <h3>Brawl Stars 88 Gemas</h3>
+                <p>88 Gemas - Brawl Stars</p>
+                <p class="price">R$ 31,30</p>
+            </div>
+            <div class="product-item">
+                <img src="https://media.discordapp.net/attachments/1242973662345433088/1243352190907715584/2126faad6543e720f9bac5e3138aa731.png?ex=6651d236&is=665080b6&hm=3c39fa3012467997ecf15b5704a731d7e736ed8cb724f8894ef3714b0581ede5&=&format=webp&quality=lossless" alt="Free Fire 100 Diamantes + Bônus">
+                <h3>Free Fire 100 Diamantes + Bônus</h3>
+                <p>100 Diamantes - Free Fire</p>
+                <p class="price">R$ 6,28</p>
+            </div>
+            <!-- Novos produtos -->
+            <div class="product-item">
+                <img src="https://media.discordapp.net/attachments/1242973662345433088/1243352190907715584/2126faad6543e720f9bac5e3138aa731.png?ex=6651d236&is=665080b6&hm=3c39fa3012467997ecf15b5704a731d7e736ed8cb724f8894ef3714b0581ede5&=&format=webp&quality=lossless" alt="Free Fire 310 Diamantes + Bônus">
+                <h3>Free Fire 310 Diamantes + Bônus</h3>
+                <p>310 Diamantes - Free Fire</p>
+                <p class="price">19,58</p>
+            </div>
+            <div class="product-item">
+                <img src="https://media.discordapp.net/attachments/1242973662345433088/1243352609176424448/40-FC-Points.png?ex=6651d29a&is=6650811a&hm=674ceea7dc8b705ffa6b832043c26cba1aa687460b1ad8c136484343e32bdc43&=&format=webp&quality=lossless" alt="EA SPORTS FC MOBILE 40 Points">
+                <h3>EA SPORTS FC MOBILE 40 Points</h3>
+                <p>40 Points - EA FC MOBILE</p>
+                <p class="price">2,80</p>
+            </div>
+            <div class="product-item">
+                <img src="https://media.discordapp.net/attachments/1242973662345433088/1243352609176424448/40-FC-Points.png?ex=6651d29a&is=6650811a&hm=674ceea7dc8b705ffa6b832043c26cba1aa687460b1ad8c136484343e32bdc43&=&format=webp&quality=lossless" alt="Nome do Produto">
+                <h3>EA SPORTS FC MOBILE 100 Points</h3>
+                <p>100 Points - EA FC MOBILE</p>
+                <p class="price">6,86</p>
+            </div>
+            <div class="product-item">
+                <img src="https://media.discordapp.net/attachments/1242973662345433088/1243352609176424448/40-FC-Points.png?ex=6651d29a&is=6650811a&hm=674ceea7dc8b705ffa6b832043c26cba1aa687460b1ad8c136484343e32bdc43&=&format=webp&quality=lossless" alt="Nome do Produto">
+                <h3>EA SPORTS FC MOBILE 520 Points</h3>
+                <p>520 Points - EA FC MOBILE</p>
+                <p class="price">33,48</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+<div id="buy-section" class="buy-section">
+    <h2>PIX:</h2>
+    <img src="https://media.discordapp.net/attachments/1242973662345433088/1243651333131600054/IMG_2976.png?ex=6652400f&is=6650ee8f&hm=bd0c76d87894d793d7ed5e3282c61a114852ad75014a9830da3da24b20684030&=&format=webp&quality=lossless&width=471&height=425" alt="Instruções de Compra">
+    <p>Para pagar pelo produto desejado, por favor, entre em contato através do e-mail: lucshop440@gmail.com , Após a compra, envie o comprovante de pagamento juntamente com o nome do produto
+    </p>
+</div>
+
+<footer>
+    <p>© 2024 Luc's Shop. Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>
